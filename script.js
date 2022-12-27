@@ -1,4 +1,4 @@
-const quizQuestions = [
+const quizQuestion = [
     {
         question: "How many times has Argentina won the World Cup?",
         a: "2",
@@ -49,13 +49,64 @@ const quizQuestions = [
     }
 ]
 
-const quiz = document.getElementById("quiz")
-const answerSel = document.querySelectorAll(".answer")
-const questionSel = document.getElementById("question")
+const quiz = document.getElementById("quiz");
+const answerEls = document.querySelectorAll(".answer");
+const questionEl = document.getElementById("question");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
-const submitButton = document.getElementById("submit")
+const submitButton = document.getElementById("submit");
 
+let currentQuiz = 0;
+let score = 0;
 
+loadQuiz();
+
+function loadQuiz() {
+
+    deselectAnswers()
+
+    const currentQuizQuestion = quizQuestion[currentQuiz]
+
+    questionEl.innerText = currentQuizQuestion.question
+    a_text.innerText = currentQuizQuestion.a
+    b_text.innerText = currentQuizQuestion.b
+    c_text.innerText = currentQuizQuestion.c
+    d_text.innerText = currentQuizQuestion.d
+}
+
+function deselectAnswers() {
+    answerEls.forEach(answerEls => answerEls.checked = false)
+}
+
+function getSelected() {
+    let answer
+    answerEls.forEach(answerEl => {
+        if(answerEl.checked) {
+            answer = answerEl.id
+        }
+    })
+    return answer
+}
+
+submitButton.addEventListener("click", () => {
+    const answer = getSelected()
+    if(answer){
+        if (answer === quizQuestion[currentQuiz].correct) {
+            score++
+        }
+
+        currentQuiz++
+
+        if(currentQuiz < quizQuestion.length){
+            loadQuiz()
+        } else {
+            quiz.innerHTML = `
+            <h2>You answered: ${score}/${quizQuestion.length} questions correctly</h2>
+
+            <button onclick="location.reload()">Play Again</button>
+            `
+        }
+    }
+})
