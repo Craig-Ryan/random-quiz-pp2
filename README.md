@@ -1,6 +1,7 @@
 # Random Quiz PP2 
 
 A very basic and made-in-a-rush 2nd portfolio project quiz game using JavaScript.
+Made as part of my Code Institute Fullstack Web Developers course.
 
 ![Am I Responsive Image](assets/images/am-i.jpg)
 
@@ -40,10 +41,26 @@ No unfixed bugs to deal with
 
 This project was is hosted using GitHub pages. Deployment steps are as follow:
 
-       1. Go to the [project repository](https://github.com/Craig-Ryan/random-quiz-pp2) and go to the Settings tab
-       2. In the side bar on the left click on Pages and then in Build and Development click on the Source dropdown and select Main then save
-       3. Wait about 2 minutes then reload the page and the link and option to visit to the deployed project will appear above
+- Go to the [project repository](https://github.com/Craig-Ryan/random-quiz-pp2) and go to the Settings tab
+- In the side bar on the left click on Pages and then in Build and Development click on the Source dropdown and select Main then save
+- Wait about 2 minutes then reload the page and the link and option to visit to the deployed project will appear above
 
 Go to the live link - [Random Quiz](https://craig-ryan.github.io/random-quiz-pp2/)
+
+## Credits
+
+### Content
+
+- Inspiration for the JS in the quiz container specifically relating to the cycling thru the questions and incrementing score as well as the replay game option was taken from these two videos:
+    - [Simple Quiz using HTML & JS - Bee Coder](https://www.youtube.com/watch?v=j9Elj5Sxfug)
+    - [Build A Quiz App With JavaScript - Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&t=724s)
+
+### Media
+
+- The favicon question mark icon in the browser bar was taken from [Favicon.io](https://favicon.io/emoji-favicons/question-mark)
+
+### Acknowledgements
+
+- Thank you to Code Institute for the course materials and the extension for this project.
 
 
