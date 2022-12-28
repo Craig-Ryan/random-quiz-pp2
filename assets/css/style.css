@@ -46,7 +46,7 @@ ul li {
     margin: 1rem 0;
 }
 
-ul li labl {
+ul li lable {
     cursor: pointer;
 }
 
@@ -68,3 +68,19 @@ button:hover {
     background-color: #843511;
 }
 
+@media only screen and (max-width: 600px) {
+
+    .quiz-container {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    
+}
